@@ -8,7 +8,7 @@ const Modal = ({handleCloseModal}) => {
     <div className="bg-white w-11/12 max-w-md p-6 rounded shadow-lg  ">
      <div className="flex justify-between items-center">
      <h1 className="my-5 capitalize text-lg font-bold">
-        make an appointment
+        book an appointment
       </h1>
       <FaTimes className="w-8 cursor-pointer" onClick={handleCloseModal}/>
      </div>

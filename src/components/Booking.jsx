@@ -76,9 +76,7 @@ const Booking = () => {
   return (
     <>
       {isSubmitted ? (
-        <div
-          className="p-4 bg-green-500  rounded-lg "
-        >
+        <div className="p-4 bg-green-500  rounded-lg ">
           <h2 className="text-md md:text-xl">Thank you!</h2>
           <p className="text-sm md:text-md">
             'Your appointment has been successfully booked!'
@@ -90,8 +88,8 @@ const Booking = () => {
           className="border border-orange-peel rounded-lg p-5"
         >
           <div className="grid md:grid-cols-2 gap-3 mb-1 md:mb-6">
-            <div className="flex flex-col">
-              <label htmlFor="date" className="capitalize md:mb-2">
+            <div className="flex flex-col w-full">
+              <label htmlFor="date" className="capitalize mb-2">
                 date
               </label>
               <input
@@ -100,14 +98,14 @@ const Booking = () => {
                 id="date"
                 onChange={handleChange}
                 value={formData.date}
-                className="md:p-1 border border-gray-300 rounded" // Added border and color
+                className="w-full md:p-1 border border-gray-300 rounded" // Ensure full width
               />
               {errors.date && (
                 <p className="text-red-500 text-sm">{errors.date}</p>
               )}
             </div>
-            <div className="flex flex-col">
-              <label htmlFor="time" className="capitalize text-white md:mb-2">
+            <div className="flex flex-col w-full">
+              <label htmlFor="time" className="capitalize  mb-2">
                 time
               </label>
               <input
@@ -116,14 +114,17 @@ const Booking = () => {
                 id="time"
                 onChange={handleChange}
                 value={formData.time}
-                className="md:p-1 border border-gray-300 rounded" // Added border and color
+                className="w-full md:p-1 border border-gray-300 rounded" // Ensure full width
               />
               {errors.time && (
                 <p className="text-red-500 text-sm">{errors.time}</p>
               )}
             </div>
-            <div className="flex flex-col">
-              <label htmlFor="category" className="capitalize text-white md:mb-2">
+            <div className="flex flex-col w-full">
+              <label
+                htmlFor="category"
+                className="capitalize mb-2 "
+              >
                 select a category
               </label>
               <select
@@ -131,7 +132,7 @@ const Booking = () => {
                 value={formData.category}
                 onChange={handleChange}
                 id="category"
-                className="md:p-2 border border-gray-300 rounded" // Added border and color
+                className="w-full md:p-2 border border-gray-300 rounded" // Ensure full width
               >
                 <option value="">choose a category</option>
                 {categoryOptions.map((category) => (
@@ -144,8 +145,8 @@ const Booking = () => {
                 <p className="text-red-500 text-sm">{errors.category}</p>
               )}
             </div>
-            <div className="flex flex-col">
-              <label htmlFor="barber" className="capitalize text-white md:mb-2">
+            <div className="flex flex-col w-full">
+              <label htmlFor="barber" className="capitalize mb-2  md:mb-2">
                 select a barber
               </label>
               <select
@@ -153,7 +154,7 @@ const Booking = () => {
                 onChange={handleChange}
                 value={formData.barber}
                 id="barber"
-                className="md:p-2 border border-gray-300 rounded" // Added border and color
+                className="w-full md:p-2 border border-gray-300 rounded" // Ensure full width
               >
                 <option value="">choose a barber</option>
                 {barbers.map((barber) => (
@@ -166,8 +167,8 @@ const Booking = () => {
                 <p className="text-red-500 text-sm">{errors.barber}</p>
               )}
             </div>
-            <div className="flex flex-col">
-              <label htmlFor="name" className="capitalize md:mb-2">
+            <div className="flex flex-col w-full">
+              <label htmlFor="name" className="capitalize mb-2">
                 name
               </label>
               <input
@@ -176,14 +177,14 @@ const Booking = () => {
                 id="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="md:p-2 border border-gray-300 rounded" // Added border and color
+                className="w-full md:p-2 border border-gray-300 rounded" // Ensure full width
               />
               {errors.name && (
                 <p className="text-red-500 text-sm">{errors.name}</p>
               )}
             </div>
-            <div className="flex flex-col">
-              <label htmlFor="phone" className="capitalize md:mb-2">
+            <div className="flex flex-col w-full">
+              <label htmlFor="phone" className="capitalize mb-2">
                 phone number
               </label>
               <input
@@ -192,14 +193,15 @@ const Booking = () => {
                 id="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="md:p-2 border border-gray-300 rounded" // Added border and color
+                className="w-full md:p-2 border border-gray-300 rounded" // Ensure full width
               />
               {errors.phone && (
                 <p className="text-red-500 text-sm">{errors.phone}</p>
               )}
             </div>
           </div>
-          <div className="flex flex-col">
+
+          <div className="flex flex-col w-full">
             <label htmlFor="email" className="capitalize md:mb-2">
               email
             </label>
@@ -209,12 +211,13 @@ const Booking = () => {
               id="email"
               value={formData.email}
               onChange={handleChange}
-              className="md:p-2 border border-gray-300 rounded" // Added border and color
+              className="w-full md:p-2 border border-gray-300 rounded" // Ensure full width
             />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email}</p>
             )}
           </div>
+
           <button
             type="submit"
             className="w-full text-lg p-1 md:p-3 mt-3 md:mt-6 capitalize bg-orange-peel font-semibold rounded-lg"
