@@ -4,7 +4,7 @@ import HairdryerIcon from "./hairdryer.svg";
 import ScissorsIcon from "./scissors.svg";
 import FacebookIcon from "./facebook.svg";
 import instagramIcon from "./instagram.svg";
-import XIcon from "./XIcon.svg";
+import XIcon from "./xIcon.svg";
 
 export{
     DropIcon,

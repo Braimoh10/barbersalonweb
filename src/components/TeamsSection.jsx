@@ -16,7 +16,7 @@ const TeamsSection = () => {
             of experience to ensure you receive the best grooming services
             possible.
           </p>
-          <Link to="/" className="uppercase bg-orange-peel border border-transparent
+          <Link to="/about" className="uppercase bg-orange-peel border border-transparent
            hover:translate-y-0 delay-150 hover:scale-110 transition duration-300 ease-in-out 
            px-8 py-4 text-white font-semibold rounded-lg">
             view more

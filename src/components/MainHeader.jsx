@@ -1,7 +1,22 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Image from "../assets/images/hero_image.jpg";
+import Modal from "./Modal";
+
 const MainHeader = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+      setIsModalOpen(true);
+    };
+  
+    const handleCloseModal = () => {
+      setIsModalOpen(false);
+    };
+
   return (
+    <>
     <section
       className="relative w-full bg-cover bg-center h-[70vh] md:h-full flex flex-col items-start"
       style={{ backgroundImage: `url(${Image}) ` }}
@@ -21,14 +36,17 @@ const MainHeader = () => {
               individuality
             </p>
           </div>
-          <Link to="/" className="uppercase bg-orange-peel border border-transparent
+          <Link to="/" onClick={handleOpenModal} className="uppercase bg-orange-peel border border-transparent
            hover:translate-y-0 delay-150 hover:scale-110 transition duration-300 ease-in-out 
-           px-8 py-4 text-white font-semibold rounded-lg">
+           px-8 py-4 text-white font-semibold rounded-lg ">
             Book Now
           </Link>
+         
         </article>
       </div>
     </section>
+     {isModalOpen && <Modal handleCloseModal={handleCloseModal} />}
+     </>
   );
 };
 export default MainHeader;
