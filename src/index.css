@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#121212;
+}
+
+@layer components{
+    .max-container{
+       max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .nav-container{
+        @apply max-container flex justify-between items-center px-6 py-3 lg:px-16 xl:py-6 xl:px-32
+    }
+
+    .nav-logo{
+        @apply transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
+    }
+
+    .nav-link{
+        @apply  border-b-2 border-transparent hover:border-cyan-500 translate-y-1 hover:scale-110 duration-300 transition ease-in-out delay-150
+    } 
+
+    .nav-icons{
+        @apply text-lg transition ease-in-out delay-150 hover:hover:scale-110 duration-300
+    }
+}
